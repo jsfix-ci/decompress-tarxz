@@ -1,9 +1,9 @@
 {
-  "name": "decompress-tarxz",
+  "name": "@felipecrs/decompress-tarxz",
   "version": "3.0.0",
   "description": "decompress tar.xz plugin",
   "license": "MIT",
-  "repository": "kevva/decompress-tarxz",
+  "repository": "felipecrs/decompress-tarxz",
   "author": {
     "name": "Kevin Mårtensson",
     "email": "kevinmartensson@gmail.com",
