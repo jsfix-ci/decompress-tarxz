@@ -1,12 +1,12 @@
 'use strict';
 const decompressTar = require('decompress-tar');
-const fileType = require('file-type');
+const FileType = require('file-type');
 const isStream = require('is-stream');
 const lzmaNative = require('lzma-native');
 
 module.exports = () => async input => {
 	const isBuffer = Buffer.isBuffer(input);
-	const type = isBuffer ? fileType(input) : null;
+	const type = isBuffer ? await FileType.fromBuffer(input) : null;
 
 	if (!isBuffer && !isStream(input)) {
 		return Promise.reject(new TypeError(`Expected a Buffer or Stream, got ${typeof input}`));
