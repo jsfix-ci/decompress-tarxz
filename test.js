@@ -5,7 +5,7 @@ const test = require('ava');
 const decompressTarxz = require('.');
 
 async function isJpg(input) {
-	const fileType = await FileType.fromBuffer(input);
+	const fileType = await FileType.fileTypeFromBuffer(input);
 	return fileType.ext === 'jpg';
 }
 

@@ -6,7 +6,7 @@ const lzmaNative = require('lzma-native');
 
 module.exports = () => async input => {
 	const isBuffer = Buffer.isBuffer(input);
-	const type = isBuffer ? await FileType.fromBuffer(input) : null;
+	const type = isBuffer ? await FileType.fileTypeFromBuffer(input) : null;
 
 	if (!isBuffer && !isStream(input)) {
 		return Promise.reject(new TypeError(`Expected a Buffer or Stream, got ${typeof input}`));
